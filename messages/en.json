@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "coatOfArms": "Coat of Arms",
+    "pastoralDiary": "Pastoral Diary",
+    "pastoralLetters": "Pastoral Letters",
+    "teachings": "Archbishop's Teachings",
+    "reflections": "Reflections & Homilies",
+    "addresses": "Addresses",
+    "messages": "Messages",
+    "interviews": "Interviews",
+    "gallery": "Photo Gallery",
+    "appointments": "Book Appointment",
+    "appointmentsLaity": "Appointment for Lay Faithfuls",
+    "appointmentsClergy": "Appointment for Priests & Religious",
+    "contact": "Contact Me"
+  },
+  "home": {
+    "heroTagline": "Most Rev. Valerian M. Okeke · Archbishop of Onitsha",
+    "heroHeading": "I came that they may have life in abundance",
+    "heroSub": "John 10:10",
+    "latestTeachings": "Latest Teachings",
+    "viewAll": "View All",
+    "upcomingEvents": "Upcoming Events",
+    "viewDiary": "View Full Pastoral Diary",
+    "fromTheGallery": "From the Gallery",
+    "viewGallery": "View Gallery",
+    "livestream": "Live Stream",
+    "watchLive": "Watch Live"
+  },
+  "about": {
+    "title": "About His Grace",
+    "profile": "Profile",
+    "timeline": "Timeline"
+  },
+  "teachings": {
+    "title": "Archbishop's Teachings",
+    "reflections": "Reflections & Homilies",
+    "addresses": "Addresses",
+    "messages": "Messages",
+    "interviews": "Interviews",
+    "readMore": "Read More",
+    "download": "Download PDF"
+  },
+  "letters": {
+    "title": "My Pastoral Letters",
+    "download": "Download PDF",
+    "year": "Year"
+  },
+  "gallery": {
+    "title": "My Pastoral Gallery",
+    "all": "All",
+    "ordinations": "Ordinations",
+    "visits": "Pastoral Visits",
+    "events": "Events",
+    "official": "Official",
+    "personal": "Personal"
+  },
+  "appointments": {
+    "title": "Book an Appointment",
+    "laityTitle": "Appointment for Lay Faithfuls",
+    "clergyTitle": "Appointment for Priests & Religious",
+    "laityDay": "Office day: Tuesday",
+    "clergyDay": "Office day: Wednesday",
+    "firstCome": "Available slots are on first come, first served basis.",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "purpose": "Purpose of Visit",
+    "date": "Preferred Date",
+    "submit": "Request Appointment",
+    "success": "Your appointment request has been submitted. You will be contacted for confirmation.",
+    "error": "Something went wrong. Please try again."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "address": "Physical Address",
+    "hours": "Work Hours",
+    "email": "Email Address",
+    "phone": "Phone Numbers",
+    "form": "Send a Message",
+    "name": "Your Name",
+    "yourEmail": "Your Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Thank you. Your message has been received.",
+    "social": "Social Networks",
+    "weekdays": "Monday – Friday: 7:00am – 7:00pm",
+    "weekend": "Weekend: 10:00am – 5:00pm"
+  },
+  "coatOfArms": {
+    "title": "My Coat of Arms",
+    "motto": "Ut vitam Habeant",
+    "mottoTranslation": "That they may have life"
+  },
+  "diary": {
+    "title": "My Pastoral Programme"
+  },
+  "common": {
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "loading": "Loading…",
+    "backToTop": "Back to Top",
+    "language": "Language"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "archdiocese": "Archdiocese of Onitsha",
+    "address": "Basilica of the Most Holy Trinity, P.O. Box 411, Onitsha, Anambra State, Nigeria"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Ụlọ",
+    "about": "Maka Ya",
+    "coatOfArms": "Ihe Ngosi Ya",
+    "pastoralDiary": "Ndekọ Ọrụ Ụkọchukwu",
+    "pastoralLetters": "Akwụkwọ Ozi Ụkọchukwu",
+    "teachings": "Nkuzi Onyenwe-anyi Bishọp",
+    "reflections": "Ihe Nchegbu & Okwu Chukwu",
+    "addresses": "Ọkwa Okwu",
+    "messages": "Ozi",
+    "interviews": "Mkparịta Ụka",
+    "gallery": "Ogige Foto",
+    "appointments": "Dee Oge Ịhụ Ya",
+    "appointmentsLaity": "Oge Ịhụ Ya Maka Ndị Laic",
+    "appointmentsClergy": "Oge Ịhụ Ya Maka Ndị Ụkọchukwu",
+    "contact": "Kpọtụrụ Ya"
+  },
+  "home": {
+    "heroTagline": "Onyenwe-anyi Bishọp Valerian M. Okeke · Onyisi Bishọp nke Onitsha",
+    "heroHeading": "Abịara m ka ha nwee ndụ, nwee ya oke ọtụtụ",
+    "heroSub": "Johụn 10:10",
+    "latestTeachings": "Nkuzi Ọhụrụ",
+    "viewAll": "Hụ Niile",
+    "upcomingEvents": "Mmemme Na-abịa",
+    "viewDiary": "Hụ Ndekọ Ọrụ Ọhụrụ",
+    "fromTheGallery": "Site na Ogige Foto",
+    "viewGallery": "Hụ Ogige Foto",
+    "livestream": "Ọbọchị Dịnụ",
+    "watchLive": "Ele Ya Dịnụ"
+  },
+  "about": {
+    "title": "Maka Onyenwe-anyi Bishọp",
+    "profile": "Ndụ Ya",
+    "timeline": "Usoro Ihe Mere"
+  },
+  "teachings": {
+    "title": "Nkuzi Onyenwe-anyi Bishọp",
+    "reflections": "Ihe Nchegbu & Okwu Chukwu",
+    "addresses": "Ọkwa Okwu",
+    "messages": "Ozi",
+    "interviews": "Mkparịta Ụka",
+    "readMore": "Gụọ Ọzọ",
+    "download": "Budata PDF"
+  },
+  "letters": {
+    "title": "Akwụkwọ Ozi Ụkọchukwu M",
+    "download": "Budata PDF",
+    "year": "Afọ"
+  },
+  "gallery": {
+    "title": "Ogige Foto Ọrụ M",
+    "all": "Niile",
+    "ordinations": "Iwu Ụkọchukwu",
+    "visits": "Nleta Ụkọchukwu",
+    "events": "Mmemme",
+    "official": "Gọọmenti",
+    "personal": "Onwe Ya"
+  },
+  "appointments": {
+    "title": "Dee Oge Ịhụ Ya",
+    "laityTitle": "Oge Ịhụ Ya Maka Ndị Laic",
+    "clergyTitle": "Oge Ịhụ Ya Maka Ndị Ụkọchukwu",
+    "laityDay": "Ụbọchị ọrụ: Tiuzde",
+    "clergyDay": "Ụbọchị ọrụ: Wenezdee",
+    "firstCome": "A na-enye oge ndị bịara izizi.",
+    "name": "Aha Gị Ọhụrụ",
+    "phone": "Nọmba Ekwentị",
+    "email": "Email",
+    "purpose": "Ihe I Chọrọ Ya Maka",
+    "date": "Ụbọchị I Họọrọ",
+    "submit": "Rịọ Oge",
+    "success": "Ejidere arịọ gị. A ga-akpọtụrụ gị maka nkwenye.",
+    "error": "Ihe ọjọọ mere. Nwaa ọzọ."
+  },
+  "contact": {
+    "title": "Kpọtụrụ Ya",
+    "address": "Adreesị Ebe O Di",
+    "hours": "Oge Ọrụ",
+    "email": "Email",
+    "phone": "Nọmba Ekwentị",
+    "form": "Ziga Ozi",
+    "name": "Aha Gị",
+    "yourEmail": "Email Gị",
+    "message": "Ozi",
+    "send": "Ziga Ozi",
+    "success": "Daalụ. Ejidere ozi gị.",
+    "social": "Ndị Ọha Ntanetị",
+    "weekdays": "Mọnde – Fraịde: 7:00ụtụtụ – 7:00anyasị",
+    "weekend": "Ọsọ Izu: 10:00ụtụtụ – 5:00anyasị"
+  },
+  "coatOfArms": {
+    "title": "Ihe Ngosi M",
+    "motto": "Ut vitam Habeant",
+    "mottoTranslation": "Ka ha nwee ndụ"
+  },
+  "diary": {
+    "title": "Mmemme Ụkọchukwu M"
+  },
+  "common": {
+    "darkMode": "Oji",
+    "lightMode": "Ọcha",
+    "loading": "Na-ebu…",
+    "backToTop": "Laghachi Elu",
+    "language": "Asụsụ"
+  },
+  "footer": {
+    "rights": "Ikike niile echekwara.",
+    "archdiocese": "Diocese Onitsha",
+    "address": "Basilica of the Most Holy Trinity, P.O. Box 411, Onitsha, Anambra State, Nigeria"
+  }
+}

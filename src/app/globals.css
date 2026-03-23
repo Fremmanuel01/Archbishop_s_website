@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy:   #0a0f1e;
+    --color-gold:   #b8922f;
+    --color-gold-lt:#d4a84b;
+    --color-cream:  #e8e0d0;
+    --color-muted:  #c8bda8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-navy text-cream font-body antialiased;
+  }
+
+  ::selection {
+    background: rgba(184, 146, 47, 0.3);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0a0f1e; }
+  ::-webkit-scrollbar-thumb { background: #b8922f; border-radius: 3px; }
+}
+
+@layer components {
+  .gold-divider {
+    @apply flex items-center justify-center gap-3 my-6;
+  }
+  .gold-divider::before,
+  .gold-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-gold opacity-40;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-10 lg:px-16;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #b8922f, #d4a84b, #e8c060, #d4a84b, #b8922f);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 5s linear infinite;
+  }
+
+  .kicker {
+    @apply text-xs tracking-[0.22em] uppercase text-gold-light opacity-80 font-body;
+  }
+
+  .card-surface {
+    @apply bg-navy-light border border-gold/10 rounded-sm transition-all duration-300;
+  }
+  .card-surface:hover {
+    @apply border-gold/30;
+    box-shadow: 0 8px 32px rgba(184,146,47,0.08);
+  }
+
+  .page-hero {
+    @apply relative min-h-[38vh] flex items-end pb-16 overflow-hidden;
+    background: linear-gradient(180deg, #0a0f1e 0%, #060b16 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
+
+@keyframes goldShimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.nav-glass {
+  background: rgba(10, 15, 30, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(184, 146, 47, 0.12);
+}
+
+#page-transition {
+  position: fixed;
+  inset: 0;
+  background: #0a0f1e;
+  z-index: 9999;
+  pointer-events: none;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}

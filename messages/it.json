@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "coatOfArms": "Stemma",
+    "pastoralDiary": "Diario Pastorale",
+    "pastoralLetters": "Lettere Pastorali",
+    "teachings": "Insegnamenti dell'Arcivescovo",
+    "reflections": "Riflessioni & Omelie",
+    "addresses": "Discorsi",
+    "messages": "Messaggi",
+    "interviews": "Interviste",
+    "gallery": "Galleria Fotografica",
+    "appointments": "Prenota un Appuntamento",
+    "appointmentsLaity": "Appuntamento per Laici",
+    "appointmentsClergy": "Appuntamento per Sacerdoti e Religiosi",
+    "contact": "Contattami"
+  },
+  "home": {
+    "heroTagline": "Mons. Valerian M. Okeke · Arcivescovo di Onitsha",
+    "heroHeading": "Sono venuto perché abbiano la vita e l'abbiano in abbondanza",
+    "heroSub": "Giovanni 10:10",
+    "latestTeachings": "Ultimi Insegnamenti",
+    "viewAll": "Vedi Tutti",
+    "upcomingEvents": "Prossimi Eventi",
+    "viewDiary": "Visualizza il Diario Pastorale Completo",
+    "fromTheGallery": "Dalla Galleria",
+    "viewGallery": "Vedi Galleria",
+    "livestream": "Diretta Streaming",
+    "watchLive": "Guarda in Diretta"
+  },
+  "about": {
+    "title": "Su Sua Grazia",
+    "profile": "Profilo",
+    "timeline": "Cronologia"
+  },
+  "teachings": {
+    "title": "Insegnamenti dell'Arcivescovo",
+    "reflections": "Riflessioni & Omelie",
+    "addresses": "Discorsi",
+    "messages": "Messaggi",
+    "interviews": "Interviste",
+    "readMore": "Leggi di Più",
+    "download": "Scarica PDF"
+  },
+  "letters": {
+    "title": "Le Mie Lettere Pastorali",
+    "download": "Scarica PDF",
+    "year": "Anno"
+  },
+  "gallery": {
+    "title": "La Mia Galleria Pastorale",
+    "all": "Tutti",
+    "ordinations": "Ordinazioni",
+    "visits": "Visite Pastorali",
+    "events": "Eventi",
+    "official": "Ufficiale",
+    "personal": "Personale"
+  },
+  "appointments": {
+    "title": "Prenota un Appuntamento",
+    "laityTitle": "Appuntamento per Laici",
+    "clergyTitle": "Appuntamento per Sacerdoti e Religiosi",
+    "laityDay": "Giorno d'ufficio: Martedì",
+    "clergyDay": "Giorno d'ufficio: Mercoledì",
+    "firstCome": "I posti disponibili sono assegnati in ordine di prenotazione.",
+    "name": "Nome Completo",
+    "phone": "Numero di Telefono",
+    "email": "Indirizzo Email",
+    "purpose": "Scopo della Visita",
+    "date": "Data Preferita",
+    "submit": "Richiedi Appuntamento",
+    "success": "La tua richiesta è stata inviata. Sarai contattato per la conferma.",
+    "error": "Si è verificato un errore. Riprova."
+  },
+  "contact": {
+    "title": "Contattami",
+    "address": "Indirizzo Fisico",
+    "hours": "Orari di Lavoro",
+    "email": "Indirizzo Email",
+    "phone": "Numeri di Telefono",
+    "form": "Invia un Messaggio",
+    "name": "Il Tuo Nome",
+    "yourEmail": "La Tua Email",
+    "message": "Messaggio",
+    "send": "Invia Messaggio",
+    "success": "Grazie. Il tuo messaggio è stato ricevuto.",
+    "social": "Social Network",
+    "weekdays": "Lunedì – Venerdì: 7:00 – 19:00",
+    "weekend": "Weekend: 10:00 – 17:00"
+  },
+  "coatOfArms": {
+    "title": "Il Mio Stemma",
+    "motto": "Ut vitam Habeant",
+    "mottoTranslation": "Che abbiano la vita"
+  },
+  "diary": {
+    "title": "Il Mio Programma Pastorale"
+  },
+  "common": {
+    "darkMode": "Modalità Scura",
+    "lightMode": "Modalità Chiara",
+    "loading": "Caricamento…",
+    "backToTop": "Torna Su",
+    "language": "Lingua"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "archdiocese": "Arcidiocesi di Onitsha",
+    "address": "Basilica della Santissima Trinità, C.P. 411, Onitsha, Stato di Anambra, Nigeria"
+  }
+}
