@@ -16,6 +16,19 @@ const nextConfig = {
       { protocol: "https", hostname: "archbishopvalokeke.org" },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com;",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
