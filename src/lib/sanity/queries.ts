@@ -20,7 +20,7 @@ export async function getHomePage(locale: Locale) {
     groq`*[_type == "homePage"][0]{
       "heroHeading":    heroHeading[$locale],
       "heroSubheading": heroSubheading[$locale],
-      heroImage,
+      heroImage, heroVideoUrl,
       "featuredQuotes": featuredQuotes[]{
         "quote": select(
           $locale == "ig" => quoteIg,

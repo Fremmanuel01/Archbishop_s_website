@@ -27,6 +27,12 @@ export const homePage = defineType({
     }),
     defineField({ name: "heroImage", title: "Hero Background Image", type: "image", options: { hotspot: true } }),
     defineField({
+      name: "heroVideoUrl",
+      title: "Hero Background Video URL",
+      type: "url",
+      description: "Direct MP4/WebM URL (e.g. from Cloudinary or your server). If set, this plays as a looping background video instead of the image.",
+    }),
+    defineField({
       name: "featuredQuotes",
       title: "Featured Quotes (for carousel)",
       type: "array",

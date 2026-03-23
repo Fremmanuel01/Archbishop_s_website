@@ -7,12 +7,13 @@ import GoldDivider from "@/components/ui/GoldDivider";
 import { urlFor } from "@/lib/sanity/image";
 
 interface Props {
-  heading?:    string;
-  subheading?: string;
-  heroImage?:  object;
+  heading?:     string;
+  subheading?:  string;
+  heroImage?:   object;
+  heroVideoUrl?: string;
 }
 
-export default function HeroSection({ heading, subheading, heroImage }: Props) {
+export default function HeroSection({ heading, subheading, heroImage, heroVideoUrl }: Props) {
   const t       = useTranslations("home");
   const heroRef = useRef<HTMLDivElement>(null);
   const tlRef   = useRef<gsap.core.Timeline | null>(null);
@@ -37,27 +38,57 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
     ? urlFor(heroImage).width(1600).height(900).format("webp").url()
     : null;
 
+  const hasVideo = !!heroVideoUrl;
+
   return (
-    <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#faf8f5]">
-      {/* Background image with parallax */}
-      {bgUrl && (
+    <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a0f1e]">
+
+      {/* ── Video background ── */}
+      {hasVideo && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          src={heroVideoUrl}
+        />
+      )}
+
+      {/* ── Fallback: static image ── */}
+      {!hasVideo && bgUrl && (
         <div className="absolute inset-0">
-          <Image src={bgUrl} alt="Archbishop Valerian Okeke" fill className="object-cover object-center opacity-20" priority />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(245,240,232,0.95) 0%, rgba(245,240,232,0.6) 50%, rgba(250,248,245,1) 100%)" }} />
+          <Image
+            src={bgUrl}
+            alt="Archbishop Valerian Okeke"
+            fill
+            className="object-cover object-center opacity-30"
+            priority
+          />
         </div>
       )}
 
-      {/* Decorative elements */}
+      {/* ── Overlay — always present, stronger on video ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: hasVideo
+            ? "linear-gradient(to bottom, rgba(10,15,30,0.65) 0%, rgba(10,15,30,0.45) 50%, rgba(10,15,30,0.75) 100%)"
+            : "linear-gradient(to bottom, rgba(10,15,30,0.85) 0%, rgba(10,15,30,0.60) 50%, rgba(10,15,30,0.90) 100%)",
+        }}
+      />
+
+      {/* ── Decorative glows ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold/3 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-gold/4 blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-gold/5 blur-3xl" />
       </div>
 
-      {/* Content */}
+      {/* ── Content ── */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="hero-kicker kicker mb-8">{t("heroTagline")}</p>
+        <p className="hero-kicker kicker mb-8" style={{ color: "#c9a84c" }}>{t("heroTagline")}</p>
 
-        <h1 className="hero-heading font-heading font-light text-4xl md:text-6xl lg:text-7xl text-navy leading-tight tracking-wide mb-8 text-balance">
+        <h1 className="hero-heading font-heading font-light text-4xl md:text-6xl lg:text-7xl text-cream leading-tight tracking-wide mb-8 text-balance">
           <em className="not-italic text-gold-gradient">&ldquo;{displayHeading}&rdquo;</em>
         </h1>
 
@@ -65,15 +96,15 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
           <GoldDivider className="max-w-xs mx-auto" />
         </div>
 
-        <p className="hero-sub text-navy/70 text-sm tracking-[0.25em] uppercase mt-6 font-body">
+        <p className="hero-sub text-cream/70 text-sm tracking-[0.25em] uppercase mt-6 font-body">
           {displaySubheading}
         </p>
       </div>
 
-      {/* Scroll indicator */}
+      {/* ── Scroll indicator ── */}
       <div className="hero-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-[9px] uppercase tracking-[0.3em] text-gold/80">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
+        <div className="w-px h-10 bg-gradient-to-b from-gold/60 to-transparent animate-pulse" />
       </div>
     </section>
   );

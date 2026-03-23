@@ -26,6 +26,7 @@ export default async function HomePage({ params: { locale } }: { params: { local
         heading={page?.heroHeading}
         subheading={page?.heroSubheading}
         heroImage={page?.heroImage}
+        heroVideoUrl={page?.heroVideoUrl}
       />
 
       <AboutSnippet locale={locale} />
