@@ -31,13 +31,13 @@ export default function ContactForm({ locale: _locale }: { locale: string }) {
         <div className="w-12 h-12 border border-gold rounded-full flex items-center justify-center mx-auto mb-4">
           <span className="text-gold text-xl">✓</span>
         </div>
-        <p className="text-sm text-cream/70">{t("success")}</p>
+        <p className="text-sm text-navy/70">{t("success")}</p>
       </div>
     );
   }
 
-  const inputCls = "w-full bg-navy border border-gold/15 text-cream text-sm px-4 py-3 outline-none focus:border-gold/50 transition-colors placeholder:text-cream/20 font-body";
-  const labelCls = "block text-[10px] uppercase tracking-widest text-cream/50 mb-2";
+  const inputCls = "w-full bg-white border border-gold/30 text-navy text-sm px-4 py-3 outline-none focus:border-gold/60 transition-colors placeholder:text-navy/30 font-body";
+  const labelCls = "block text-[10px] uppercase tracking-widest text-navy/50 mb-2";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">

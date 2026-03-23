@@ -82,7 +82,7 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
               </div>
             )}
             <div className="hidden md:block">
-              <div className="font-heading text-sm text-cream/90 leading-tight group-hover:text-gold transition-colors">
+              <div className="font-heading text-sm text-navy/90 leading-tight group-hover:text-gold transition-colors">
                 Archbishop Valerian Okeke
               </div>
               <div className="text-[9px] tracking-[0.2em] uppercase text-gold/60">Archdiocese of Onitsha</div>
@@ -100,7 +100,7 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
                   href={localizedHref(item.href)}
                   className={cn(
                     "px-3 py-2 text-[11px] uppercase tracking-widest transition-colors duration-200 font-body block",
-                    isActive(item.href) ? "text-gold" : "text-cream/60 hover:text-gold"
+                    isActive(item.href) ? "text-gold" : "text-navy/60 hover:text-gold"
                   )}
                 >
                   {t(item.key)}
@@ -108,10 +108,10 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
                 </Link>
                 {/* Dropdown */}
                 {item.sub && openDrop === item.key && (
-                  <div className="absolute top-full left-0 min-w-[200px] nav-glass rounded-sm border border-gold/10 py-2 shadow-gold">
+                  <div className="absolute top-full left-0 min-w-[200px] nav-glass rounded-sm border border-gold/30 py-2 shadow-gold">
                     {item.sub.map((s) => (
                       <Link key={s.key} href={localizedHref(s.href)}
-                        className="block px-4 py-2 text-[10px] uppercase tracking-widest text-cream/60 hover:text-gold hover:bg-gold/5 transition-colors"
+                        className="block px-4 py-2 text-[10px] uppercase tracking-widest text-navy/60 hover:text-gold hover:bg-gold/5 transition-colors"
                       >
                         {t(s.key)}
                       </Link>
@@ -131,9 +131,9 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
-              <span className={cn("w-5 h-px bg-cream transition-all duration-300", menuOpen && "rotate-45 translate-y-[7px]")} />
-              <span className={cn("w-5 h-px bg-cream transition-all duration-300", menuOpen && "opacity-0")} />
-              <span className={cn("w-5 h-px bg-cream transition-all duration-300", menuOpen && "-rotate-45 -translate-y-[7px]")} />
+              <span className={cn("w-5 h-px bg-navy transition-all duration-300", menuOpen && "rotate-45 translate-y-[7px]")} />
+              <span className={cn("w-5 h-px bg-navy transition-all duration-300", menuOpen && "opacity-0")} />
+              <span className={cn("w-5 h-px bg-navy transition-all duration-300", menuOpen && "-rotate-45 -translate-y-[7px]")} />
             </button>
           </div>
         </div>
@@ -150,8 +150,8 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
               href={localizedHref(item.href)}
               onClick={() => setMenuOpen(false)}
               className={cn(
-                "block py-3 text-sm uppercase tracking-widest border-b border-gold/10 transition-colors",
-                isActive(item.href) ? "text-gold" : "text-cream/70 hover:text-gold"
+                "block py-3 text-sm uppercase tracking-widest border-b border-gold/30 transition-colors",
+                isActive(item.href) ? "text-gold" : "text-navy/70 hover:text-gold"
               )}
             >
               {t(item.key)}
@@ -161,7 +161,7 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
                 {item.sub.map((s) => (
                   <Link key={s.key} href={localizedHref(s.href)}
                     onClick={() => setMenuOpen(false)}
-                    className="block py-2 text-[11px] uppercase tracking-widest text-cream/50 hover:text-gold transition-colors"
+                    className="block py-2 text-[11px] uppercase tracking-widest text-navy/50 hover:text-gold transition-colors"
                   >
                     {t(s.key)}
                   </Link>

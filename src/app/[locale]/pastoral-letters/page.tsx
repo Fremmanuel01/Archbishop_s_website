@@ -29,7 +29,7 @@ export default async function PastoralLettersPage({ params: { locale } }: { para
         <div className="section-container">
           <SectionReveal stagger={false}>
             <p className="kicker mb-3">{t("title")}</p>
-            <h1 className="font-heading text-5xl md:text-7xl font-light text-cream">
+            <h1 className="font-heading text-5xl md:text-7xl font-light text-navy">
               Pastoral <span className="text-gold-gradient italic">Letters</span>
             </h1>
             <GoldDivider className="max-w-[80px] mt-6" />
@@ -37,10 +37,10 @@ export default async function PastoralLettersPage({ params: { locale } }: { para
         </div>
       </div>
 
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-white">
         <div className="section-container max-w-4xl">
           {letters?.length === 0 && (
-            <p className="text-center text-cream/40 py-20">No letters added yet. Add them in the CMS.</p>
+            <p className="text-center text-navy/40 py-20">No letters added yet. Add them in the CMS.</p>
           )}
           {Object.entries(grouped).sort(([a], [b]) => b.localeCompare(a)).map(([decade, items]) => (
             <SectionReveal key={decade} className="mb-16">
@@ -51,11 +51,11 @@ export default async function PastoralLettersPage({ params: { locale } }: { para
                     className="card-surface group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5">
                     <div>
                       <span className="text-[10px] uppercase tracking-widest text-gold mr-3">{letter.year}</span>
-                      <h3 className="font-heading text-lg text-cream group-hover:text-gold transition-colors inline">
+                      <h3 className="font-heading text-lg text-navy group-hover:text-gold transition-colors inline">
                         {letter.title}
                       </h3>
                       {letter.description && (
-                        <p className="text-xs text-cream/40 mt-1 leading-relaxed line-clamp-2">{letter.description}</p>
+                        <p className="text-xs text-navy/40 mt-1 leading-relaxed line-clamp-2">{letter.description}</p>
                       )}
                     </div>
                     {letter.pdf && (

@@ -56,7 +56,7 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
   }, []);
 
   return (
-    <section className="py-20 bg-navy-dark overflow-hidden">
+    <section className="py-20 bg-[#faf8f5] overflow-hidden">
       <div className="section-container">
         <div className="text-center mb-16">
           <p className="kicker mb-3">Life & Ministry</p>
@@ -74,21 +74,21 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
                 {/* Content */}
                 <div className={`flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
                   <div className={`inline-block card-surface p-5 ${ev.highlight ? "border-gold/40 shadow-gold" : ""}`}>
-                    <p className={`text-[10px] uppercase tracking-widest mb-1 ${ev.highlight ? "text-gold" : "text-cream/40"}`}>
+                    <p className={`text-[10px] uppercase tracking-widest mb-1 ${ev.highlight ? "text-gold" : "text-navy/40"}`}>
                       {ev.year}
                     </p>
-                    <h3 className={`font-heading text-lg leading-snug ${ev.highlight ? "text-gold" : "text-cream/90"}`}>
+                    <h3 className={`font-heading text-lg leading-snug ${ev.highlight ? "text-gold" : "text-navy/90"}`}>
                       {ev.label}
                     </h3>
                     {ev.description && (
-                      <p className="text-xs text-cream/50 mt-2 leading-relaxed">{ev.description}</p>
+                      <p className="text-xs text-navy/50 mt-2 leading-relaxed">{ev.description}</p>
                     )}
                   </div>
                 </div>
 
                 {/* Dot */}
                 <div className="relative z-10 flex-shrink-0">
-                  <div className={`w-3 h-3 rounded-full border-2 transition-all ${ev.highlight ? "bg-gold border-gold shadow-gold" : "bg-navy border-gold/40"}`} />
+                  <div className={`w-3 h-3 rounded-full border-2 transition-all ${ev.highlight ? "bg-gold border-gold shadow-gold" : "bg-white border-gold/40"}`} />
                 </div>
 
                 {/* Spacer */}

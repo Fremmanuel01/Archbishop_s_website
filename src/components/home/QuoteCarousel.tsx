@@ -30,11 +30,11 @@ export default function QuoteCarousel({ quotes }: { quotes: Quote[] }) {
   const current = quotes[index];
 
   return (
-    <section className="bg-navy-dark py-20 overflow-hidden">
+    <section className="bg-[#f5f0e8] py-20 overflow-hidden">
       <div className="section-container max-w-3xl text-center">
         <div className="kicker mb-8">Words of His Grace</div>
 
-        <blockquote ref={quoteRef} className="font-heading text-2xl md:text-4xl font-light text-cream/90 leading-relaxed italic mb-6">
+        <blockquote ref={quoteRef} className="font-heading text-2xl md:text-4xl font-light text-navy/90 leading-relaxed italic mb-6">
           &ldquo;{current.quote}&rdquo;
         </blockquote>
 

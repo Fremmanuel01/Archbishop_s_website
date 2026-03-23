@@ -24,7 +24,7 @@ export default function LatestTeachings({ teachings }: { teachings: Teaching[] }
   if (!teachings?.length) return null;
 
   return (
-    <section className="py-20 bg-navy">
+    <section className="py-20 bg-white">
       <div className="section-container">
         <SectionReveal>
           <div className="text-center mb-14">
@@ -42,7 +42,7 @@ export default function LatestTeachings({ teachings }: { teachings: Teaching[] }
                   data-reveal
                   className="card-surface group overflow-hidden block"
                 >
-                  <div className="aspect-[16/10] overflow-hidden bg-navy-light relative">
+                  <div className="aspect-[16/10] overflow-hidden bg-[#f5f0e8] relative">
                     {imgUrl ? (
                       <Image src={imgUrl} alt={item.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                     ) : (
@@ -51,17 +51,17 @@ export default function LatestTeachings({ teachings }: { teachings: Teaching[] }
                       </div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
-                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-widest text-gold bg-navy/80 px-2 py-1 rounded-sm">
+                    <span className="absolute top-3 left-3 text-[9px] uppercase tracking-widest text-gold bg-white/80 px-2 py-1 rounded-sm">
                       {categoryLabel(item.category, locale)}
                     </span>
                   </div>
                   <div className="p-5">
-                    <p className="text-[10px] text-cream/40 mb-2 uppercase tracking-wider">{formatDate(item.publishedAt, locale)}</p>
-                    <h3 className="font-heading text-lg text-cream group-hover:text-gold transition-colors leading-snug line-clamp-2">
+                    <p className="text-[10px] text-navy/40 mb-2 uppercase tracking-wider">{formatDate(item.publishedAt, locale)}</p>
+                    <h3 className="font-heading text-lg text-navy group-hover:text-gold transition-colors leading-snug line-clamp-2">
                       {item.title}
                     </h3>
                     {item.excerpt && (
-                      <p className="text-xs text-cream/50 mt-2 leading-relaxed line-clamp-2">{item.excerpt}</p>
+                      <p className="text-xs text-navy/50 mt-2 leading-relaxed line-clamp-2">{item.excerpt}</p>
                     )}
                     <span className="inline-flex items-center gap-1.5 mt-4 text-[10px] uppercase tracking-widest text-gold group-hover:gap-3 transition-all">
                       {tc("readMore")} <span>→</span>

@@ -27,7 +27,7 @@ export default function GalleryGrid({ items, locale: _locale }: { items: Gallery
   }));
 
   return (
-    <section className="py-16 bg-navy">
+    <section className="py-16 bg-white">
       <div className="section-container">
         {/* Filter tabs */}
         <div className="flex flex-wrap gap-2 mb-10">
@@ -38,7 +38,7 @@ export default function GalleryGrid({ items, locale: _locale }: { items: Gallery
                 "text-[10px] uppercase tracking-widest px-4 py-2 border transition-all duration-200",
                 filter === album
                   ? "bg-gold text-navy border-gold"
-                  : "border-gold/20 text-cream/50 hover:border-gold/50 hover:text-gold"
+                  : "border-gold/40 text-navy/50 hover:border-gold/60 hover:text-gold"
               )}>
               {album === "All" ? t("all") : album}
             </button>
@@ -48,7 +48,7 @@ export default function GalleryGrid({ items, locale: _locale }: { items: Gallery
         {/* Masonry-style grid */}
         <SectionReveal>
           {filtered.length === 0 && (
-            <p className="text-center text-cream/40 py-20">No gallery items yet. Add them in the CMS Studio.</p>
+            <p className="text-center text-navy/40 py-20">No gallery items yet. Add them in the CMS Studio.</p>
           )}
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((item, i) => {
@@ -61,12 +61,12 @@ export default function GalleryGrid({ items, locale: _locale }: { items: Gallery
                   <div className="relative overflow-hidden">
                     <Image src={imgUrl} alt={item.caption || ""} width={500} height={400}
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-105 object-cover" />
-                    <div className="absolute inset-0 bg-navy/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <span className="text-gold text-2xl">⊕</span>
                     </div>
                   </div>
                   {item.caption && (
-                    <p className="p-3 text-[10px] text-cream/50 leading-relaxed">{item.caption}</p>
+                    <p className="p-3 text-[10px] text-navy/50 leading-relaxed">{item.caption}</p>
                   )}
                 </div>
               );

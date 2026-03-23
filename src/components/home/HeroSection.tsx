@@ -38,12 +38,12 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
     : null;
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-navy-dark">
+    <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#faf8f5]">
       {/* Background image with parallax */}
       {bgUrl && (
         <div className="absolute inset-0">
           <Image src={bgUrl} alt="Archbishop Valerian Okeke" fill className="object-cover object-center opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/50 to-navy" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white" />
         </div>
       )}
 
@@ -57,7 +57,7 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <p className="hero-kicker kicker mb-8">{t("heroTagline")}</p>
 
-        <h1 className="hero-heading font-heading font-light text-4xl md:text-6xl lg:text-7xl text-cream leading-tight tracking-wide mb-8 text-balance">
+        <h1 className="hero-heading font-heading font-light text-4xl md:text-6xl lg:text-7xl text-navy leading-tight tracking-wide mb-8 text-balance">
           <em className="not-italic text-gold-gradient">&ldquo;{displayHeading}&rdquo;</em>
         </h1>
 
@@ -65,7 +65,7 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
           <GoldDivider className="max-w-xs mx-auto" />
         </div>
 
-        <p className="hero-sub text-cream/50 text-sm tracking-[0.25em] uppercase mt-6 font-body">
+        <p className="hero-sub text-navy/50 text-sm tracking-[0.25em] uppercase mt-6 font-body">
           {displaySubheading}
         </p>
       </div>

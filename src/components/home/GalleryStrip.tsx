@@ -33,14 +33,14 @@ export default function GalleryStrip({ items }: { items: GalleryItem[] }) {
   if (!items?.length) return null;
 
   return (
-    <section className="py-20 bg-navy-dark overflow-hidden">
+    <section className="py-20 bg-[#faf8f5] overflow-hidden">
       <div className="section-container mb-10">
         <div className="flex items-end justify-between">
           <div>
             <p className="kicker mb-2">{t("fromTheGallery")}</p>
           </div>
           <Link href={`/${locale}/gallery`}
-            className="text-[10px] uppercase tracking-widest text-gold/70 hover:text-gold transition-colors border-b border-gold/20 pb-1">
+            className="text-[10px] uppercase tracking-widest text-gold/70 hover:text-gold transition-colors border-b border-gold/40 pb-1">
             {t("viewGallery")} →
           </Link>
         </div>
@@ -56,7 +56,7 @@ export default function GalleryStrip({ items }: { items: GalleryItem[] }) {
                 <Image src={imgUrl} alt={item.caption || "Gallery"} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 {item.caption && (
-                  <p className="absolute bottom-3 left-3 right-3 text-xs text-cream opacity-0 group-hover:opacity-100 transition-opacity line-clamp-2">
+                  <p className="absolute bottom-3 left-3 right-3 text-xs text-white opacity-0 group-hover:opacity-100 transition-opacity line-clamp-2">
                     {item.caption}
                   </p>
                 )}

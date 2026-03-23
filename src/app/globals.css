@@ -14,7 +14,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-navy text-cream font-body antialiased;
+    @apply bg-white text-navy font-body antialiased;
   }
 
   ::selection {
@@ -23,7 +23,7 @@
   }
 
   ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: #0a0f1e; }
+  ::-webkit-scrollbar-track { background: #faf8f5; }
   ::-webkit-scrollbar-thumb { background: #b8922f; border-radius: 3px; }
 }
 
@@ -55,16 +55,16 @@
   }
 
   .card-surface {
-    @apply bg-navy-light border border-gold/10 rounded-sm transition-all duration-300;
+    @apply bg-white border border-gold/40 rounded-sm transition-all duration-300 shadow-sm;
   }
   .card-surface:hover {
-    @apply border-gold/30;
-    box-shadow: 0 8px 32px rgba(184,146,47,0.08);
+    @apply border-gold/60;
+    box-shadow: 0 8px 32px rgba(184,146,47,0.12);
   }
 
   .page-hero {
     @apply relative min-h-[38vh] flex items-end pb-16 overflow-hidden;
-    background: linear-gradient(180deg, #0a0f1e 0%, #060b16 100%);
+    background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
   }
 }
 
@@ -78,16 +78,16 @@
 }
 
 .nav-glass {
-  background: rgba(10, 15, 30, 0.94);
+  background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(184, 146, 47, 0.12);
+  border-bottom: 1px solid rgba(184, 146, 47, 0.20);
 }
 
 #page-transition {
   position: fixed;
   inset: 0;
-  background: #0a0f1e;
+  background: #ffffff;
   z-index: 9999;
   pointer-events: none;
   transform-origin: bottom;

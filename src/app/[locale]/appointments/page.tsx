@@ -31,14 +31,14 @@ export default async function AppointmentsPage({
       <div className="page-hero pt-32 pb-20">
         <div className="section-container">
           <p className="kicker mb-3">{t("title")}</p>
-          <h1 className="font-heading text-5xl md:text-7xl font-light text-cream">
+          <h1 className="font-heading text-5xl md:text-7xl font-light text-navy">
             Book an <span className="text-gold-gradient italic">Appointment</span>
           </h1>
           <GoldDivider className="max-w-[80px] mt-6" />
         </div>
       </div>
 
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-white">
         <div className="section-container max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Laity */}
@@ -49,11 +49,11 @@ export default async function AppointmentsPage({
                     <span className="text-gold text-sm">L</span>
                   </div>
                   <div>
-                    <h2 className="font-heading text-xl text-cream">{t("laityTitle")}</h2>
+                    <h2 className="font-heading text-xl text-navy">{t("laityTitle")}</h2>
                     <p className="text-[10px] uppercase tracking-widest text-gold/70 mt-0.5">{t("laityDay")}</p>
                   </div>
                 </div>
-                <p className="text-xs text-cream/50 mb-8 leading-relaxed">{t("firstCome")}</p>
+                <p className="text-xs text-navy/50 mb-8 leading-relaxed">{t("firstCome")}</p>
                 <AppointmentForm
                   type="laity"
                   locale={locale}
@@ -70,11 +70,11 @@ export default async function AppointmentsPage({
                     <span className="text-gold text-sm">C</span>
                   </div>
                   <div>
-                    <h2 className="font-heading text-xl text-cream">{t("clergyTitle")}</h2>
+                    <h2 className="font-heading text-xl text-navy">{t("clergyTitle")}</h2>
                     <p className="text-[10px] uppercase tracking-widest text-gold/70 mt-0.5">{t("clergyDay")}</p>
                   </div>
                 </div>
-                <p className="text-xs text-cream/50 mb-8 leading-relaxed">{t("firstCome")}</p>
+                <p className="text-xs text-navy/50 mb-8 leading-relaxed">{t("firstCome")}</p>
                 <AppointmentForm
                   type="clergy"
                   locale={locale}

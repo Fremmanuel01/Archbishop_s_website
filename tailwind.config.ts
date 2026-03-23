@@ -20,6 +20,7 @@ const config: Config = {
           700: "#111c38",
           600: "#172248",
         },
+        ivory: "#faf8f5",
         gold: {
           DEFAULT: "#b8922f",
           light: "#d4a84b",

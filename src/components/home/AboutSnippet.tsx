@@ -18,7 +18,7 @@ export default async function AboutSnippet({ locale }: { locale: Locale }) {
     : null;
 
   return (
-    <section className="py-24 bg-navy overflow-hidden">
+    <section className="py-24 bg-[#faf8f5] overflow-hidden">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -27,29 +27,29 @@ export default async function AboutSnippet({ locale }: { locale: Locale }) {
               {portraitUrl ? (
                 <Image src={portraitUrl} alt="Archbishop Valerian M. Okeke" fill className="object-cover object-top" />
               ) : (
-                <div className="absolute inset-0 bg-navy-light flex items-center justify-center border border-gold/10">
+                <div className="absolute inset-0 bg-[#f5f0e8] flex items-center justify-center border border-gold/30">
                   <span className="font-heading text-8xl text-gold/10">V</span>
                 </div>
               )}
               {/* Gold frame accent */}
-              <div className="absolute inset-0 border border-gold/10 rounded-sm" />
-              <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold/15 rounded-sm -z-10" />
+              <div className="absolute inset-0 border border-gold/30 rounded-sm" />
+              <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold/20 rounded-sm -z-10" />
             </div>
           </SectionReveal>
 
           {/* Text */}
           <SectionReveal>
             <p data-reveal className="kicker mb-4">{t("title")}</p>
-            <h2 data-reveal className="font-heading text-4xl md:text-5xl font-light text-cream leading-tight mb-6">
+            <h2 data-reveal className="font-heading text-4xl md:text-5xl font-light text-navy leading-tight mb-6">
               Most Rev. Valerian<br />
               <span className="text-gold-gradient italic">Maduka Okeke</span>
             </h2>
             <GoldDivider className="max-w-[80px] mb-6" />
-            <p data-reveal className="text-cream/60 text-sm leading-relaxed mb-4">
+            <p data-reveal className="text-navy/60 text-sm leading-relaxed mb-4">
               Archbishop of Onitsha and Metropolitan of Onitsha Ecclesiastical Province since 2003.
               Ordained to the priesthood on 11 July 1981, he holds a Doctorate in Moral Theology from the Alfonsiana in Rome.
             </p>
-            <p data-reveal className="text-cream/60 text-sm leading-relaxed mb-8">
+            <p data-reveal className="text-navy/60 text-sm leading-relaxed mb-8">
               His episcopal motto, <em className="text-gold/80">Ut vitam Habeant</em> — &ldquo;That they may have life&rdquo; —
               drawn from John 10:10, is the animating spirit of his entire pastoral ministry.
             </p>

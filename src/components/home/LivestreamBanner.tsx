@@ -9,7 +9,7 @@ export default function LivestreamBanner({ streamUrl }: { streamUrl: string }) {
     : streamUrl;
 
   return (
-    <section className="py-20 bg-navy-dark">
+    <section className="py-20 bg-[#f5f0e8]">
       <div className="section-container">
         <div className="text-center mb-10">
           <span className="inline-flex items-center gap-2 kicker mb-3">
@@ -17,7 +17,7 @@ export default function LivestreamBanner({ streamUrl }: { streamUrl: string }) {
             {t("livestream")}
           </span>
         </div>
-        <div className="relative aspect-video max-w-4xl mx-auto rounded-sm overflow-hidden border border-gold/10 shadow-gold">
+        <div className="relative aspect-video max-w-4xl mx-auto rounded-sm overflow-hidden border border-gold/30 shadow-gold">
           <iframe
             src={embedUrl}
             title={t("watchLive")}

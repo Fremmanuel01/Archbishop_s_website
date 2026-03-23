@@ -30,7 +30,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         <div className="section-container">
           <SectionReveal stagger={false}>
             <p className="kicker mb-3">{t("title")}</p>
-            <h1 className="font-heading text-5xl md:text-7xl font-light text-cream">
+            <h1 className="font-heading text-5xl md:text-7xl font-light text-navy">
               Most Rev. Valerian<br />
               <span className="text-gold-gradient italic">Maduka Okeke</span>
             </h1>
@@ -40,25 +40,25 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       </div>
 
       {/* Portrait + Bio */}
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Portrait */}
             <div className="lg:col-span-2">
               <div className="sticky top-28">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-gold/10 shadow-gold">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm border border-gold/30 shadow-gold">
                   {portraitUrl ? (
                     <Image src={portraitUrl} alt="Archbishop Valerian M. Okeke" fill className="object-cover object-top" />
                   ) : (
-                    <div className="absolute inset-0 bg-navy-light flex items-center justify-center">
+                    <div className="absolute inset-0 bg-[#f5f0e8] flex items-center justify-center">
                       <span className="font-heading text-8xl text-gold/10">V</span>
                     </div>
                   )}
                 </div>
-                <div className="mt-6 p-4 border border-gold/10 rounded-sm bg-navy-light">
+                <div className="mt-6 p-4 border border-gold/30 rounded-sm bg-[#f5f0e8]">
                   <p className="text-[10px] uppercase tracking-widest text-gold mb-2">Episcopal Motto</p>
-                  <p className="font-heading text-xl italic text-cream">Ut vitam Habeant</p>
-                  <p className="text-xs text-cream/50 mt-1">&ldquo;That they may have life&rdquo; — John 10:10</p>
+                  <p className="font-heading text-xl italic text-navy">Ut vitam Habeant</p>
+                  <p className="text-xs text-navy/50 mt-1">&ldquo;That they may have life&rdquo; — John 10:10</p>
                 </div>
               </div>
             </div>
@@ -67,13 +67,13 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
             <div className="lg:col-span-3 space-y-14">
               {bio?.sections?.map((section: { heading: string; body: object[]; image?: object }, i: number) => (
                 <SectionReveal key={i} stagger={false}>
-                  <h2 className="font-heading text-2xl md:text-3xl text-cream mb-4">{section.heading}</h2>
+                  <h2 className="font-heading text-2xl md:text-3xl text-navy mb-4">{section.heading}</h2>
                   <GoldDivider className="max-w-[60px] mb-6" />
-                  <div className="prose prose-sm prose-invert prose-p:text-cream/60 prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-cream">
+                  <div className="prose prose-sm prose-p:text-navy/60 prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-navy">
                     <PortableText value={section.body as Parameters<typeof PortableText>[0]["value"]} />
                   </div>
                   {section.image && (
-                    <div className="mt-6 relative aspect-video overflow-hidden rounded-sm border border-gold/10">
+                    <div className="mt-6 relative aspect-video overflow-hidden rounded-sm border border-gold/30">
                       <Image
                         src={urlFor(section.image).width(800).format("webp").url()}
                         alt={section.heading}
@@ -86,7 +86,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
               {/* Fallback content if no CMS data */}
               {!bio?.sections?.length && (
-                <div className="space-y-8 text-cream/60 text-sm leading-relaxed">
+                <div className="space-y-8 text-navy/60 text-sm leading-relaxed">
                   <p>Most Reverend Valerian Maduka Okeke was born on Tuesday, 20 October 1953. He completed his primary education at St. Anthony&apos;s Catholic School, Umudioka, and St. Gabriel&apos;s Catholic School, Ifitedunu (1959–1966).</p>
                   <p>He was ordained to the priesthood on Saturday, 11 July 1981 by Cardinal Francis Arinze, and holds a Doctorate in Moral Theology from the Alfonsiana in Rome (1986–1991).</p>
                   <p>He was appointed Co-adjutor Archbishop of Onitsha on 9 November 2001, episcopally consecrated on 9 February 2002, and assumed the Metropolitan See of Onitsha on 1 September 2003.</p>

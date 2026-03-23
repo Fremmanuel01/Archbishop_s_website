@@ -25,28 +25,28 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
       <div className="page-hero pt-32 pb-20">
         <div className="section-container">
           <p className="kicker mb-3">{t("title")}</p>
-          <h1 className="font-heading text-5xl md:text-7xl font-light text-cream">
+          <h1 className="font-heading text-5xl md:text-7xl font-light text-navy">
             Contact <span className="text-gold-gradient italic">Us</span>
           </h1>
           <GoldDivider className="max-w-[80px] mt-6" />
         </div>
       </div>
 
-      <section className="py-20 bg-navy">
+      <section className="py-20 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Info column */}
             <SectionReveal className="lg:col-span-2 space-y-10">
               <div data-reveal>
                 <h3 className="kicker mb-4">{t("address")}</h3>
-                <p className="text-sm text-cream/60 leading-relaxed">
+                <p className="text-sm text-navy/60 leading-relaxed">
                   {contact?.address || "Onitsha Catholic Secretariat, Basilica of the Most Holy Trinity, P.O. Box 411, Onitsha, Anambra State, Nigeria"}
                 </p>
               </div>
               <div data-reveal>
                 <h3 className="kicker mb-4">{t("hours")}</h3>
-                <p className="text-sm text-cream/60">{t("weekdays")}</p>
-                <p className="text-sm text-cream/60">{t("weekend")}</p>
+                <p className="text-sm text-navy/60">{t("weekdays")}</p>
+                <p className="text-sm text-navy/60">{t("weekend")}</p>
               </div>
               <div data-reveal>
                 <h3 className="kicker mb-4">{t("phone")}</h3>
@@ -74,9 +74,9 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                   <div className="space-y-4">
                     {staff.map((s: { name: string; role: string; phone?: string; email?: string }, i: number) => (
                       <div key={i} className="card-surface p-4">
-                        <p className="text-sm text-cream font-medium">{s.name}</p>
+                        <p className="text-sm text-navy font-medium">{s.name}</p>
                         <p className="text-[10px] text-gold/60 uppercase tracking-wider mt-0.5">{s.role}</p>
-                        {s.phone && <p className="text-xs text-cream/50 mt-1">{s.phone}</p>}
+                        {s.phone && <p className="text-xs text-navy/50 mt-1">{s.phone}</p>}
                       </div>
                     ))}
                   </div>
@@ -86,14 +86,14 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
 
             {/* Form column */}
             <SectionReveal stagger={false} className="lg:col-span-3">
-              <h2 className="font-heading text-2xl text-cream mb-6">{t("form")}</h2>
+              <h2 className="font-heading text-2xl text-navy mb-6">{t("form")}</h2>
               <ContactForm locale={locale} />
             </SectionReveal>
           </div>
 
           {/* Map */}
           {mapUrl && (
-            <div className="mt-16 relative aspect-video rounded-sm overflow-hidden border border-gold/10">
+            <div className="mt-16 relative aspect-video rounded-sm overflow-hidden border border-gold/30">
               <iframe src={mapUrl} title="Location Map" className="w-full h-full border-0" loading="lazy" allowFullScreen />
             </div>
           )}

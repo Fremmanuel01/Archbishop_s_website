@@ -20,7 +20,7 @@ export default async function GalleryPage({ params: { locale } }: { params: { lo
       <div className="page-hero pt-32 pb-20">
         <div className="section-container">
           <p className="kicker mb-3">{t("title")}</p>
-          <h1 className="font-heading text-5xl md:text-7xl font-light text-cream">
+          <h1 className="font-heading text-5xl md:text-7xl font-light text-navy">
             Pastoral <span className="text-gold-gradient italic">Gallery</span>
           </h1>
           <GoldDivider className="max-w-[80px] mt-6" />
