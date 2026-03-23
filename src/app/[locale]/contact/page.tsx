@@ -32,7 +32,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
         </div>
       </div>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#faf8f5]">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Info column */}
@@ -75,7 +75,7 @@ export default async function ContactPage({ params: { locale } }: { params: { lo
                     {staff.map((s: { name: string; role: string; phone?: string; email?: string }, i: number) => (
                       <div key={i} className="card-surface p-4">
                         <p className="text-sm text-navy font-medium">{s.name}</p>
-                        <p className="text-[10px] text-gold/60 uppercase tracking-wider mt-0.5">{s.role}</p>
+                        <p className="text-[10px] text-gold/80 uppercase tracking-wider mt-0.5">{s.role}</p>
                         {s.phone && <p className="text-xs text-navy/50 mt-1">{s.phone}</p>}
                       </div>
                     ))}

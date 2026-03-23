@@ -82,10 +82,10 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
               </div>
             )}
             <div className="hidden md:block">
-              <div className="font-heading text-sm text-navy/90 leading-tight group-hover:text-gold transition-colors">
+              <div className="font-heading text-sm text-navy font-semibold leading-tight group-hover:text-gold transition-colors">
                 Archbishop Valerian Okeke
               </div>
-              <div className="text-[9px] tracking-[0.2em] uppercase text-gold/60">Archdiocese of Onitsha</div>
+              <div className="text-[9px] tracking-[0.2em] uppercase text-gold/80">Archdiocese of Onitsha</div>
             </div>
           </Link>
 
@@ -99,8 +99,10 @@ export default function Navbar({ logoUrl }: { logoUrl?: string }) {
                 <Link
                   href={localizedHref(item.href)}
                   className={cn(
-                    "px-3 py-2 text-[11px] uppercase tracking-widest transition-colors duration-200 font-body block",
-                    isActive(item.href) ? "text-gold" : "text-navy/60 hover:text-gold"
+                    "px-3 py-2 text-[11px] uppercase tracking-widest transition-all duration-200 font-body block border-b-2",
+                    isActive(item.href)
+                      ? "text-gold font-medium border-gold"
+                      : "text-navy/70 hover:text-gold border-transparent hover:border-gold"
                   )}
                 >
                   {t(item.key)}

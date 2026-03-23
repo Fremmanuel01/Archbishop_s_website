@@ -40,7 +40,7 @@ export default function GalleryStrip({ items }: { items: GalleryItem[] }) {
             <p className="kicker mb-2">{t("fromTheGallery")}</p>
           </div>
           <Link href={`/${locale}/gallery`}
-            className="text-[10px] uppercase tracking-widest text-gold/70 hover:text-gold transition-colors border-b border-gold/40 pb-1">
+            className="text-[10px] uppercase tracking-widest text-gold/90 hover:text-gold transition-colors border-b border-gold/40 pb-1">
             {t("viewGallery")} →
           </Link>
         </div>

@@ -52,8 +52,8 @@ export default function AppointmentForm({ type, availableSlots }: Props) {
     );
   }
 
-  const inputCls = "w-full bg-white border border-gold/30 text-navy text-sm px-4 py-3 rounded-none outline-none focus:border-gold/60 transition-colors placeholder:text-navy/30 font-body";
-  const labelCls = "block text-[10px] uppercase tracking-widest text-navy/50 mb-2";
+  const inputCls = "w-full bg-white border border-gold/30 text-navy text-sm px-4 py-3 rounded-none outline-none focus:border-gold/60 transition-colors placeholder:text-navy/50 font-body";
+  const labelCls = "block text-[10px] uppercase tracking-widest text-navy/70 mb-2";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">

@@ -40,7 +40,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       </div>
 
       {/* Portrait + Bio */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#faf8f5]">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Portrait */}
@@ -58,7 +58,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 <div className="mt-6 p-4 border border-gold/30 rounded-sm bg-[#f5f0e8]">
                   <p className="text-[10px] uppercase tracking-widest text-gold mb-2">Episcopal Motto</p>
                   <p className="font-heading text-xl italic text-navy">Ut vitam Habeant</p>
-                  <p className="text-xs text-navy/50 mt-1">&ldquo;That they may have life&rdquo; — John 10:10</p>
+                  <p className="text-xs text-navy/70 mt-1">&ldquo;That they may have life&rdquo; — John 10:10</p>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
                 <SectionReveal key={i} stagger={false}>
                   <h2 className="font-heading text-2xl md:text-3xl text-navy mb-4">{section.heading}</h2>
                   <GoldDivider className="max-w-[60px] mb-6" />
-                  <div className="prose prose-sm prose-p:text-navy/60 prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-navy">
+                  <div className="prose prose-sm prose-p:text-navy/80 prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-navy">
                     <PortableText value={section.body as Parameters<typeof PortableText>[0]["value"]} />
                   </div>
                   {section.image && (
@@ -86,7 +86,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
 
               {/* Fallback content if no CMS data */}
               {!bio?.sections?.length && (
-                <div className="space-y-8 text-navy/60 text-sm leading-relaxed">
+                <div className="space-y-8 text-navy/80 text-sm leading-relaxed">
                   <p>Most Reverend Valerian Maduka Okeke was born on Tuesday, 20 October 1953. He completed his primary education at St. Anthony&apos;s Catholic School, Umudioka, and St. Gabriel&apos;s Catholic School, Ifitedunu (1959–1966).</p>
                   <p>He was ordained to the priesthood on Saturday, 11 July 1981 by Cardinal Francis Arinze, and holds a Doctorate in Moral Theology from the Alfonsiana in Rome (1986–1991).</p>
                   <p>He was appointed Co-adjutor Archbishop of Onitsha on 9 November 2001, episcopally consecrated on 9 February 2002, and assumed the Metropolitan See of Onitsha on 1 September 2003.</p>

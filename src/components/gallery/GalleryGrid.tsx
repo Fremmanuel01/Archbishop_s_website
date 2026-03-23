@@ -48,7 +48,7 @@ export default function GalleryGrid({ items, locale: _locale }: { items: Gallery
         {/* Masonry-style grid */}
         <SectionReveal>
           {filtered.length === 0 && (
-            <p className="text-center text-navy/40 py-20">No gallery items yet. Add them in the CMS Studio.</p>
+            <p className="text-center text-navy/60 py-20">No gallery items yet. Add them in the CMS Studio.</p>
           )}
           <div className="columns-2 md:columns-3 lg:columns-4 gap-4">
             {filtered.map((item, i) => {

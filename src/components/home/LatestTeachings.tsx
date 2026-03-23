@@ -56,7 +56,7 @@ export default function LatestTeachings({ teachings }: { teachings: Teaching[] }
                     </span>
                   </div>
                   <div className="p-5">
-                    <p className="text-[10px] text-navy/40 mb-2 uppercase tracking-wider">{formatDate(item.publishedAt, locale)}</p>
+                    <p className="text-[10px] text-navy/60 mb-2 uppercase tracking-wider">{formatDate(item.publishedAt, locale)}</p>
                     <h3 className="font-heading text-lg text-navy group-hover:text-gold transition-colors leading-snug line-clamp-2">
                       {item.title}
                     </h3>

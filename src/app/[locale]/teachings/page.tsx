@@ -47,7 +47,7 @@ export default async function TeachingsPage({
         </div>
       </div>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#faf8f5]">
         <div className="section-container">
           {/* Category tabs */}
           <div className="flex flex-wrap gap-2 mb-12">
@@ -57,7 +57,7 @@ export default async function TeachingsPage({
                 className={`text-[10px] uppercase tracking-widest px-5 py-2 border transition-all duration-200 ${
                   activeCat === cat.key
                     ? "bg-gold text-navy border-gold"
-                    : "border-gold/40 text-navy/50 hover:border-gold/60 hover:text-gold"
+                    : "border-gold/40 text-navy/70 hover:border-gold/60 hover:text-gold"
                 }`}>
                 {cat.label[locale] || cat.label.en}
               </Link>
@@ -66,7 +66,7 @@ export default async function TeachingsPage({
 
           <SectionReveal>
             {teachings?.length === 0 && (
-              <p className="text-center text-navy/40 py-20">No teachings added yet. Add them in the CMS Studio.</p>
+              <p className="text-center text-navy/60 py-20">No teachings added yet. Add them in the CMS Studio.</p>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {teachings?.map((item: {
@@ -93,7 +93,7 @@ export default async function TeachingsPage({
                         </span>
                       </div>
                       <div className="p-5">
-                        <p className="text-[10px] text-navy/40 mb-2">{formatDate(item.publishedAt, locale)}</p>
+                        <p className="text-[10px] text-navy/60 mb-2">{formatDate(item.publishedAt, locale)}</p>
                         <h3 className="font-heading text-lg text-navy group-hover:text-gold transition-colors line-clamp-2">
                           {item.title}
                         </h3>
@@ -103,7 +103,7 @@ export default async function TeachingsPage({
                     {item.pdf && (
                       <div className="px-5 pb-5">
                         <a href={item.pdf} target="_blank" rel="noopener noreferrer"
-                          className="text-[10px] uppercase tracking-widest text-gold/70 hover:text-gold transition-colors">
+                          className="text-[10px] uppercase tracking-widest text-gold/90 hover:text-gold transition-colors">
                           ↓ {t("download")}
                         </a>
                       </div>

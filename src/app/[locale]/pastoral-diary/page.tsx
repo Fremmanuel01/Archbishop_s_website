@@ -40,7 +40,7 @@ export default async function PastoralDiaryPage({ params: { locale } }: { params
               loading="lazy"
             />
           </div>
-          <p className="text-center text-[10px] text-navy/30 mt-4 uppercase tracking-widest">
+          <p className="text-center text-[10px] text-navy/50 mt-4 uppercase tracking-widest">
             Pastoral Programme · Archdiocese of Onitsha
           </p>
         </div>

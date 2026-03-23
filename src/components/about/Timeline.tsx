@@ -74,7 +74,7 @@ export default function Timeline({ events }: { events: TimelineEvent[] }) {
                 {/* Content */}
                 <div className={`flex-1 ${i % 2 === 0 ? "text-right" : "text-left"}`}>
                   <div className={`inline-block card-surface p-5 ${ev.highlight ? "border-gold/40 shadow-gold" : ""}`}>
-                    <p className={`text-[10px] uppercase tracking-widest mb-1 ${ev.highlight ? "text-gold" : "text-navy/40"}`}>
+                    <p className={`text-[10px] uppercase tracking-widest mb-1 ${ev.highlight ? "text-gold" : "text-navy/60"}`}>
                       {ev.year}
                     </p>
                     <h3 className={`font-heading text-lg leading-snug ${ev.highlight ? "text-gold" : "text-navy/90"}`}>

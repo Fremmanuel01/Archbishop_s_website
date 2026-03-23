@@ -37,14 +37,14 @@ export default async function PastoralLettersPage({ params: { locale } }: { para
         </div>
       </div>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#f5f0e8]">
         <div className="section-container max-w-4xl">
           {letters?.length === 0 && (
-            <p className="text-center text-navy/40 py-20">No letters added yet. Add them in the CMS.</p>
+            <p className="text-center text-navy/60 py-20">No letters added yet. Add them in the CMS.</p>
           )}
           {Object.entries(grouped).sort(([a], [b]) => b.localeCompare(a)).map(([decade, items]) => (
             <SectionReveal key={decade} className="mb-16">
-              <h2 data-reveal className="font-heading text-xl text-gold/60 mb-6 uppercase tracking-widest">{decade}</h2>
+              <h2 data-reveal className="font-heading text-xl text-gold/80 mb-6 uppercase tracking-widest">{decade}</h2>
               <div className="space-y-4">
                 {(items as Array<{ _id: string; year: number; title: string; description?: string; pdf?: string }>).map((letter) => (
                   <div key={letter._id} data-reveal
@@ -55,7 +55,7 @@ export default async function PastoralLettersPage({ params: { locale } }: { para
                         {letter.title}
                       </h3>
                       {letter.description && (
-                        <p className="text-xs text-navy/40 mt-1 leading-relaxed line-clamp-2">{letter.description}</p>
+                        <p className="text-xs text-navy/60 mt-1 leading-relaxed line-clamp-2">{letter.description}</p>
                       )}
                     </div>
                     {letter.pdf && (

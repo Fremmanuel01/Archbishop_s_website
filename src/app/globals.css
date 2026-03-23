@@ -14,7 +14,8 @@
   html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-white text-navy font-body antialiased;
+    @apply bg-white font-body antialiased;
+    color: #0a0f1e;
   }
 
   ::selection {
@@ -42,7 +43,7 @@
   }
 
   .text-gold-gradient {
-    background: linear-gradient(135deg, #b8922f, #d4a84b, #e8c060, #d4a84b, #b8922f);
+    background: linear-gradient(135deg, #8a6820, #c9a84c, #e8c060, #c9a84c, #8a6820);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -51,11 +52,13 @@
   }
 
   .kicker {
-    @apply text-xs tracking-[0.22em] uppercase text-gold-light opacity-80 font-body;
+    @apply text-xs uppercase font-body font-semibold;
+    color: #8a6820;
+    letter-spacing: 0.15em;
   }
 
   .card-surface {
-    @apply bg-white border border-gold/40 rounded-sm transition-all duration-300 shadow-sm;
+    @apply bg-white border border-gold/40 rounded-sm transition-all duration-300 shadow-md;
   }
   .card-surface:hover {
     @apply border-gold/60;
@@ -64,7 +67,11 @@
 
   .page-hero {
     @apply relative min-h-[38vh] flex items-end pb-16 overflow-hidden;
-    background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 100%);
+    background: linear-gradient(135deg, #faf8f5 0%, #f0ead8 100%);
+  }
+
+  .section-alt {
+    background-color: #f5f0e8;
   }
 }
 
@@ -78,10 +85,10 @@
 }
 
 .nav-glass {
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(184, 146, 47, 0.20);
+  border-bottom: 2px solid rgba(184, 146, 47, 0.30);
 }
 
 #page-transition {

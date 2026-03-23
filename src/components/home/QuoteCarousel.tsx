@@ -40,7 +40,7 @@ export default function QuoteCarousel({ quotes }: { quotes: Quote[] }) {
 
         <GoldDivider className="max-w-[120px] mx-auto my-5" />
 
-        <cite className="text-[10px] uppercase tracking-[0.22em] text-gold/70 not-italic">
+        <cite className="text-[10px] uppercase tracking-[0.22em] text-gold/90 not-italic">
           — {current.source}
         </cite>
 

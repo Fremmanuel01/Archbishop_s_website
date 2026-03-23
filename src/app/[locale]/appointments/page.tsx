@@ -50,7 +50,7 @@ export default async function AppointmentsPage({
                   </div>
                   <div>
                     <h2 className="font-heading text-xl text-navy">{t("laityTitle")}</h2>
-                    <p className="text-[10px] uppercase tracking-widest text-gold/70 mt-0.5">{t("laityDay")}</p>
+                    <p className="text-[10px] uppercase tracking-widest text-gold/90 mt-0.5">{t("laityDay")}</p>
                   </div>
                 </div>
                 <p className="text-xs text-navy/50 mb-8 leading-relaxed">{t("firstCome")}</p>
@@ -71,7 +71,7 @@ export default async function AppointmentsPage({
                   </div>
                   <div>
                     <h2 className="font-heading text-xl text-navy">{t("clergyTitle")}</h2>
-                    <p className="text-[10px] uppercase tracking-widest text-gold/70 mt-0.5">{t("clergyDay")}</p>
+                    <p className="text-[10px] uppercase tracking-widest text-gold/90 mt-0.5">{t("clergyDay")}</p>
                   </div>
                 </div>
                 <p className="text-xs text-navy/50 mb-8 leading-relaxed">{t("firstCome")}</p>

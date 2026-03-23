@@ -43,7 +43,7 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
       {bgUrl && (
         <div className="absolute inset-0">
           <Image src={bgUrl} alt="Archbishop Valerian Okeke" fill className="object-cover object-center opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(245,240,232,0.95) 0%, rgba(245,240,232,0.6) 50%, rgba(250,248,245,1) 100%)" }} />
         </div>
       )}
 
@@ -65,14 +65,14 @@ export default function HeroSection({ heading, subheading, heroImage }: Props) {
           <GoldDivider className="max-w-xs mx-auto" />
         </div>
 
-        <p className="hero-sub text-navy/50 text-sm tracking-[0.25em] uppercase mt-6 font-body">
+        <p className="hero-sub text-navy/70 text-sm tracking-[0.25em] uppercase mt-6 font-body">
           {displaySubheading}
         </p>
       </div>
 
       {/* Scroll indicator */}
       <div className="hero-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-[9px] uppercase tracking-[0.3em] text-gold/50">Scroll</span>
+        <span className="text-[9px] uppercase tracking-[0.3em] text-gold/80">Scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-gold/40 to-transparent animate-pulse" />
       </div>
     </section>
