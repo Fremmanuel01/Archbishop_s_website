@@ -25,16 +25,88 @@ const jost = Jost({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: { default: "Archbishop Valerian M. Okeke", template: "%s | Archbishop Valerian Okeke" },
-  description: "Official website of Most Rev. Valerian Maduka Okeke, Archbishop of Onitsha and Metropolitan of Onitsha Ecclesiastical Province.",
-  keywords: ["Archbishop Valerian Okeke", "Onitsha", "Catholic", "Archdiocese"],
-  openGraph: {
-    siteName: "Archbishop Valerian M. Okeke",
-    type: "website",
-    locale: "en_NG",
-  },
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://archbishopvalokeke.org";
+
+const SITE_NAME = "Archbishop Valerian M. Okeke";
+const SITE_DESCRIPTION =
+  "Official website of Most Rev. Valerian Maduka Okeke, Archbishop of Onitsha and Metropolitan of Onitsha Ecclesiastical Province.";
+
+const OG_LOCALE: Record<Locale, string> = {
+  en: "en_NG",
+  ig: "ig_NG",
+  it: "it_IT",
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const locale = (locales.includes(params.locale as Locale)
+    ? params.locale
+    : "en") as Locale;
+
+  const languageAlternates = Object.fromEntries(
+    locales.map((l) => [l === "en" ? "en-NG" : l, `${SITE_URL}/${l}`])
+  );
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: SITE_NAME,
+      template: `%s | ${SITE_NAME}`,
+    },
+    description: SITE_DESCRIPTION,
+    keywords: [
+      "Archbishop Valerian Okeke",
+      "Onitsha",
+      "Catholic",
+      "Archdiocese of Onitsha",
+      "Most Rev. Valerian Maduka Okeke",
+      "Metropolitan See of Onitsha",
+    ],
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
+    manifest: "/manifest.webmanifest",
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: languageAlternates,
+    },
+    openGraph: {
+      siteName: SITE_NAME,
+      title: SITE_NAME,
+      description: SITE_DESCRIPTION,
+      url: `${SITE_URL}/${locale}`,
+      type: "website",
+      locale: OG_LOCALE[locale],
+      alternateLocale: locales
+        .filter((l) => l !== locale)
+        .map((l) => OG_LOCALE[l]),
+      images: [
+        {
+          url: "/og-default.jpg",
+          width: 1200,
+          height: 630,
+          alt: SITE_NAME,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: SITE_NAME,
+      description: SITE_DESCRIPTION,
+      images: ["/og-default.jpg"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large" },
+    },
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

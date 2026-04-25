@@ -14,6 +14,8 @@ const nextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "cdn.sanity.io" },
       { protocol: "https", hostname: "archbishopvalokeke.org" },
+      { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "img.youtube.com" },
     ],
   },
   async headers() {
@@ -23,8 +25,11 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com;",
+            value: "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com https://player.vimeo.com https://archbishopvalokeke.org https://www.google.com https://maps.google.com;",
           },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
     ];

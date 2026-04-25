@@ -10,7 +10,14 @@ import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { key: "home",           href: "/" },
-  { key: "about",          href: "/about" },
+  {
+    key: "about",
+    href: "/about",
+    sub: [
+      { key: "about",       href: "/about" },
+      { key: "coatOfArms",  href: "/coat-of-arms" },
+    ],
+  },
   {
     key: "teachings",
     href: "/teachings",
@@ -23,7 +30,14 @@ const NAV_ITEMS = [
   },
   { key: "pastoralDiary",    href: "/pastoral-diary" },
   { key: "pastoralLetters",  href: "/pastoral-letters" },
-  { key: "gallery",          href: "/gallery" },
+  {
+    key: "gallery",
+    href: "/gallery",
+    sub: [
+      { key: "gallery", href: "/gallery" },
+      { key: "videos",  href: "/videos" },
+    ],
+  },
   {
     key: "appointments",
     href: "/appointments",

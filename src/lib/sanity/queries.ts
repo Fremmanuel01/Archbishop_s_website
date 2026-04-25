@@ -89,7 +89,11 @@ export async function getTeachings(locale: Locale, category?: string) {
     groq`${filter}{
       _id, category, publishedAt, slug, excerpt, coverImage,
       "title": select($locale=="ig"=>titleIg,$locale=="it"=>titleIt,titleEn),
-      "pdf": pdfEn.asset->url
+      "pdf": select(
+        $locale=="ig" && defined(pdfIg) => pdfIg.asset->url,
+        $locale=="it" && defined(pdfIt) => pdfIt.asset->url,
+        pdfEn.asset->url
+      )
     }`,
     { locale, category }, { next: { revalidate: 600 } }
   );
@@ -98,12 +102,23 @@ export async function getTeachings(locale: Locale, category?: string) {
 export async function getTeaching(slug: string, locale: Locale) {
   return sanityClient.fetch(
     groq`*[_type == "teaching" && slug.current == $slug][0]{
-      _id, category, publishedAt, slug, coverImage,
+      _id, category, publishedAt, slug, coverImage, excerpt,
       "title": select($locale=="ig"=>titleIg,$locale=="it"=>titleIt,titleEn),
       "body":  select($locale=="ig"=>bodyIg,$locale=="it"=>bodyIt,bodyEn),
-      "pdf": pdfEn.asset->url
+      "pdf": select(
+        $locale=="ig" && defined(pdfIg) => pdfIg.asset->url,
+        $locale=="it" && defined(pdfIt) => pdfIt.asset->url,
+        pdfEn.asset->url
+      )
     }`,
     { slug, locale }, { next: { revalidate: 600 } }
+  );
+}
+
+export async function getTeachingSlugs() {
+  return sanityClient.fetch<{ slug: string }[]>(
+    groq`*[_type == "teaching" && defined(slug.current)]{ "slug": slug.current }`,
+    {}, { next: { revalidate: 3600 } }
   );
 }
 
