@@ -30,6 +30,8 @@ export const teaching = defineType({
     defineField({ name: "bodyIg", title: "Body (Igbo)",    type: "array", of: [{ type: "block" }, { type: "image" }] }),
     defineField({ name: "bodyIt", title: "Body (Italian)", type: "array", of: [{ type: "block" }, { type: "image" }] }),
     defineField({ name: "pdfEn", title: "PDF (English)", type: "file", options: { accept: "application/pdf" } }),
+    defineField({ name: "pdfIg", title: "PDF (Igbo)",    type: "file", options: { accept: "application/pdf" } }),
+    defineField({ name: "pdfIt", title: "PDF (Italian)", type: "file", options: { accept: "application/pdf" } }),
   ],
   orderings: [{ title: "Date (Newest)", name: "dateDesc", by: [{ field: "publishedAt", direction: "desc" }] }],
   preview: {
